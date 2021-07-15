@@ -17,8 +17,10 @@ var express = require('express'),
     postroutes = require("./routes/Postroutes"),
     userroutes = require("./routes/Authroutes"),
     require("./handlers/cloudinary"),
-    password = process.env.mongopassword,
-    port = process.env.Port || 3000;
+    password = process.env.mongopassword
+    
+const port = process.env.Port || 3000;
+const host = '0.0.0.0';
 
     
 app.use(flash());
@@ -60,6 +62,6 @@ app.use(function(req,res,next)
 
 app.use(postroutes)
 app.use(userroutes)
-app.listen(port,()=>{
+app.listen(port,host,()=>{
     console.log("we are live")
 })
