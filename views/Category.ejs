@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Hiraeth</title>
+        <link rel="shortcut icon" href="/images/preloader.jpg" type="image/x-icon">
+       <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="/images/fav.jpg">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/all.min.css">
+        <link rel="stylesheet" href="/css/animate.css">
+        <link rel="stylesheet" href="/plugins/slider/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/plugins/slider/css/owl.theme.default.css">
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
+        <script id="convertful-api" src="https://app.convertful.com/Convertful.js?owner=24670" async></script>
+    </head>
+<style>
+ body{
+    background-image: url("/bg.jpg") !important ;
+ }
+</style>
+
+<body>
+
+    <div class="wrapper" id="preloader">
+   
+        <img class="logo-svg" style="justify-content:center; display:flex; " src="/images/preloader.jpg" />
+  
+
+  </div>
+ 
+<header class="continer-fluid " id="nav" style="display: none;">
+   
+    <div id="menu-jk" class="header-bottom ">
+        <div class="container ">
+            <div class="row nav-row ">
+               
+                    <a href="index.html">
+                        <img src="/images/logo.jpg" alt="">
+                           </a>
+
+             
+                <div  class="nav-col" style="position:relative; margin-left: auto;">
+
+                    <ul class="navbad">
+                        <% if(!currentUser) { %> 
+                        <li >
+                            <a class="nav-link" href="/login"><i class="fas fa-user-circle"></i>
+                            </a>
+                        </li>
+                        <%} else { %>
+
+                            <li>
+                                <a class="nav-link" href="/"><i class="fas fa-home"></i></a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="/myposts"><i class="fas fa-user"></i></a>
+                            </li>
+                        <li>
+                            <a class="nav-link" href="/addpost"><i class="fas fa-plus-circle"></i></a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i></a>
+                        </li>
+                     
+                        <% } %>
+                       
+      </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </div> 
+</header>
+  
+                 
+            
+                  
+ <br>
+ 
+      
+<h2 class="p-3 " style="justify-content: center; display: flex; background-color: aliceblue;"><b><%= title %></b></h2>
+
+    <br>
+<div class="main">
+    <ul class="cards">
+        <% found.forEach(function(item){ %> 
+        <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="<%= item.picture %>"></div>
+          <div class="card_content">
+            <p class="card_text"> Product Name : <%= item.productname %>  <br> Address : <%= item.address %> </p>   <a href="/show/<%= item._id %>"><button class="btn card_btn">Details</button> </a>  
+          </div>
+        </div>
+      </li>
+      <% })%>
+     
+    </ul>
+  </div>
+
+  <footer>
+    <div class="container-fluid"
+        style="background-color:#03254c;position:relative;bottom:0%;left:0%;color:white;margin-top: 100px;padding: 25px;font-family: 'neuzeit-grotesk', sans-serif;">
+        <div class="row">
+            <div class="col-lg-4" style="display:flex;align-items:center;justify-content: center;"><a href="/">
+                    <img src="/images/logo.jpg" alt="">
+                </a></div>
+            <div class="col-lg-4" >
+                <div style="font-size:20px;line-height:35px;">  Contact us:-</div><br>
+                <div style="font-size: 15px;">hiraeth@gmail.com<br>
+                567890X</div>
+            </div>
+            <div class="col-lg-4" style="font-size: 15px;">
+                Support Us<br><br>
+                Want counselling?<br>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+<script src="/plugins/slider/js/owl.carousel.min.js"></script>
+<script src="/js/script.js"></script>
+	
+
+</html>
