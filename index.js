@@ -60,6 +60,6 @@ app.use(function(req,res,next)
 
 app.use(postroutes)
 app.use(userroutes)
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("we are live")
 })
