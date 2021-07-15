@@ -36,215 +36,423 @@
     <script id="convertful-api" src="https://app.convertful.com/Convertful.js?owner=24670" async></script>
 </head>
 <style>
-    body {
-        /* background-image: url("/bg.jpg") !important; */
-
-        *,
+    /* *,
         *::before,
         *::after {
             box-sizing: inherit;
-        }
+        } */
+        @import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+
+:root {
+  --color:  #03254c;
+  --transition-time: 0.5s;
+}
+    main {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        min-height: 640px;
+        background-color: #fff;
+    }
+
+    h3 {
+        font-family: var(--fonts-style-x);
+        font-size: 2.25em;
+    }
+
+    h6 {
+        font-family: var(--fonts-style-x);
+        font-size: 1em;
+    }
+
+
+    a {
+        text-decoration: none;
+    }
+
+    ::selection {
+        color: rgb(102, 95, 95);
+        background-color: #005AEE;
+    }
+
+    .slider {
+        width: 100%;
+    }
+
+    .slider-img {
+        width: 100%;
+    }
+
+    .blogs {
+        border: 1px solid grey;
+    }
+
+
+
+    .card-container {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 25px;
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        margin: 20px;
+        font-family: 'neuzeit-grotesk', sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1em;
+        line-height: 1.5;
+        color: #03254c;
+    }
+
+    .card {
+        height: 470px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 40px 40px -20px #8fc7d544;
+        overflow: hidden;
+    }
+
+    .card .card-top {
+        height: 150px;
+        font-family: 'neuzeit-grotesk', sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1em;
+        line-height: 1.5;
+        color: #03254c;
+        background-color: #fff;
+        overflow: hidden;
+    }
+
+    .card .card-top a {
+        display: block;
+        height: 100%;
+    }
+
+    .card .card-top a img {
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+        object-position: center;
+        transition: 300ms;
+    }
+
+    .card .card-content {
+        padding: 30px;
+    }
+
+    .card .card-content .tag {
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .card .tag-travel {
+        color: #33459b;
+    }
+
+    .card .tag-nature {
+        color: #339b4b;
+    }
+
+    .card .tag-architecture {
+        color: #9b3d33;
+    }
+
+    .card .title {
+        color: #03254c;
+        font-weight: 300;
+        transition: 300ms;
+        font-size: 35px;
+    }
+
+    .card p {
+        color: #7B8591;
+        margin-top: 20px;
+    }
+
+
+
+    .card .card-top a img:hover {
+        opacity: .75;
+    }
+
+    .card .title:hover {
+        color: #03254cbb;
+    }
+
+    @media only screen and (max-width: 1240px) {
 
         main {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100vh;
-            min-height: 640px;
-            background-color: #fff;
-        }
-
-        h3 {
-            font-family: var(--fonts-style-x);
-            font-size: 2.25em;
-        }
-
-        h6 {
-            font-family: var(--fonts-style-x);
-            font-size: 1em;
-        }
-
-        p {
-            font-size: 1em;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        ::selection {
-            color: rgb(102, 95, 95);
-            background-color: #005AEE;
-        }
-        .slider
-        {
-            width: 100%;
-        }
-        .slider-img {
-            width: 100%;
-        }
-
-        .blogs
-        {
-            border: 1px solid grey;
+            display: block;
+            height: auto;
+            min-height: max(640px, 100vh);
+            padding: 80px 0;
         }
 
         .card-container {
-            position: relative;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 25px;
-            width: 100%;
-            max-width: 1200px;
+            grid-template-columns: 1fr 1fr;
             height: auto;
-            margin: 20px;
-            font-family: 'neuzeit-grotesk', sans-serif;
-            font-weight: 300;
-            font-style: normal;
-            font-size: 1em;
-            line-height: 1.5;
-            color: #03254c;
+            margin: 0;
+            padding: 40px;
         }
 
         .card {
-            height: 470px;
-            border-radius: 10px;
-            background-color: #fff;
-            box-shadow: 0 40px 40px -20px #8fc7d544;
-            overflow: hidden;
-        }
-
-        .card .card-top {
-            height: 150px;
-            font-family: 'neuzeit-grotesk', sans-serif;
-            font-weight: 300;
-            font-style: normal;
-            font-size: 1em;
-            line-height: 1.5;
-            color: #03254c;
-            background-color: #fff;
-            overflow: hidden;
-        }
-
-        .card .card-top a {
-            display: block;
-            height: 100%;
-        }
-
-        .card .card-top a img {
-            width: 100%;
-            height: inherit;
-            object-fit: cover;
-            object-position: center;
-            transition: 300ms;
-        }
-
-        .card .card-content {
-            padding: 30px;
-        }
-
-        .card .card-content .tag {
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-
-        .card .tag-travel {
-            color: #33459b;
-        }
-
-        .card .tag-nature {
-            color: #339b4b;
-        }
-
-        .card .tag-architecture {
-            color: #9b3d33;
-        }
-
-        .card .title {
-            color: #03254c;
-            font-weight: 700;
-            transition: 300ms;
-        }
-
-        .card p {
-            color: #7B8591;
-            margin-top: 20px;
+            height: auto;
         }
 
 
+    }
 
-        .card .card-top a img:hover {
-            opacity: .75;
+    @media only screen and (max-width: 768px) {
+
+        .card-container {
+            grid-template-columns: 1fr;
         }
 
-        .card .title:hover {
-            color: #03254cbb;
+    }
+
+    @media only screen and (max-width: 425px) {
+
+        .card-container {
+            padding: 20px;
         }
 
-        @media only screen and (max-width: 1240px) {
+    }
 
-            main {
-                display: block;
-                height: auto;
-                min-height: max(640px, 100vh);
-                padding: 80px 0;
-            }
+    .designer {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        font-weight: 400;
+        color: #46a2b9;
+        letter-spacing: 1px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 300ms;
+    }
 
-            .card-container {
-                grid-template-columns: 1fr 1fr;
-                height: auto;
-                margin: 0;
-                padding: 40px;
-            }
+    .designer a {
+        text-decoration: none;
+        color: #23515d;
+    }
 
-            .card {
-                height: auto;
-            }
+    body:hover .designer {
+        opacity: 1;
+    }
 
-        }
+    .blog-title {
+        font-size: 25px;
 
-        @media only screen and (max-width: 768px) {
+    }
 
-            .card-container {
-                grid-template-columns: 1fr;
-            }
+    .blog-text {
+        color: grey !important;
+        font-size: 15px !important;
+    }
 
-        }
+    .card_btn {
+        background-color: #03254c;
+        color: white;
+    }
 
-        @media only screen and (max-width: 425px) {
+    a {
+        color: inherit;
+    }
 
-            .card-container {
-                padding: 20px;
-            }
-
-        }
-
-        .designer {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            font-weight: 400;
-            color: #46a2b9;
-            letter-spacing: 1px;
-            text-align: center;
-            text-transform: uppercase;
-            transition: 300ms;
-        }
-
-        .designer a {
-            text-decoration: none;
-            color: #23515d;
-        }
-
-        body:hover .designer {
-            opacity: 1;
-        }
-
+    .ars-wrapper {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem; 
+        padding-top: 3rem;
+        padding-bottom: 3rem;
         
+        margin: 0 auto;
+        width: max-content;
+    }
+    body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Open Sans';
+  background: #fafafa;
+}
+    .ar {
+        font-family: 'Heebo';
+        --bg-filter-opacity: 0.5;
+        background-image: linear-gradient(rgba(0, 0, 0, var(--bg-filter-opacity)), rgba(0, 0, 0, var(--bg-filter-opacity))), var(--bg-img);
+        height: 15em;
+        width: 21em;
+        font-size: 1.5em;
+        color: white;
+        border-radius: 1em;
+        padding: 1em;
+        /*margin: 2em;*/
+        display: flex;
+        align-items: flex-end;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 0 5em -1em black;
+        transition: all, var(--transition-time);
+        position: relative;
+        overflow: hidden;
+        border: 10px solid #ccc;
+        text-decoration: none;
+    }
+
+    .ar:hover {
+        transform: rotate(0);
+    }
+
+    .ar h1 {
+        margin: 0;
+        font-size: 1.5em;
+        line-height: 1.2em;
+    }
+
+    .ar p {
+        font-size: 0.75em;
+        font-family: 'Open Sans';
+        margin-top: 0.5em;
+        line-height: 2em;
+    }
+
+    .ar .tags {
+        display: flex;
+    }
+
+    .ar .tags .tag {
+        font-size: 0.75em;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 0.3rem;
+        padding: 0 0.5em;
+        margin-right: 0.5em;
+        line-height: 1.5em;
+        transition: all, var(--transition-time);
+    }
+
+    .ar:hover .tags .tag {
+        background: var(--color);
+        color: white;
+    }
+
+    .ar .date {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 0.75em;
+        padding: 1em;
+        line-height: 1em;
+        opacity: .8;
+    }
+
+    .ar:before,
+    .ar:after {
+        content: '';
+        transform: scale(0);
+        transform-origin: top left;
+        border-radius: 50%;
+        position: absolute;
+        left: -50%;
+        top: -50%;
+        z-index: -5;
+        transition: all, var(--transition-time);
+        transition-timing-function: ease-in-out;
+    }
+
+    .ar:before {
+        background: #ddd;
+        width: 250%;
+        height: 250%;
+    }
+
+    .ar:after {
+        background: white;
+        width: 200%;
+        height: 200%;
+    }
+
+    .ar:hover {
+        color: var(--color);
+    }
+
+    .ar:hover:before,
+    .ar:hover:after {
+        transform: scale(1);
+    }
+
+    .ar-grid-space .num {
+        font-size: 3em;
+        margin-bottom: 1.2rem;
+        margin-left: 1rem;
+    }
+
+    .info {
+        font-size: 1.2em;
+        display: flex;
+        padding: 1em 3em;
+        height: 3em;
+    }
+
+    .info img {
+        height: 3em;
+        margin-right: 0.5em;
+    }
+
+    .info h1 {
+        font-size: 1em;
+        font-weight: normal;
+    }
+
+    @media screen and (max-width: 1285px) {
+        .ars-wrapper {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .ars-wrapper {
+            grid-template-columns: 1fr;
+        }
+
+        .info {
+            justify-content: center;
+        }
+
+        .ar-grid-space .num {
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .ars-wrapper {
+            padding: 4rem 2rem;
+        }
+
+        .ar {
+            max-width: calc(100vw - 4rem);
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        .info {
+            display: block;
+            text-align: center;
+        }
+
+        .info h1 {
+            margin: 0;
+        }
+    }
 </style>
 
 <body>
@@ -306,7 +514,7 @@
         <div class="owl-carousel ">
             <div class="slider-img">
                 <div class="item">
-                    <div class="slider-img"><img src="/images/slider/slider-3.jpg" alt="" height="500px" width="100%">
+                    <div class="slider-img"><img src="/images/slider/slider-1.jpeg" alt="" height="500px" width="100%">
                     </div>
                     <div class="container">
                         <div class="row">
@@ -322,7 +530,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="slider-img"><img src="/images/slider/slider-1.jpg" alt="" height="500px" width="100%"></div>
+                <div class="slider-img"><img src="/images/slider/slider-4.jpg" alt="" height="500px" width="100%"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
@@ -454,21 +662,42 @@
         </ul>
     </div> -->
 
-    <div class="row container">
+    <div class="row container" style="width: 100%;margin: auto;">
 
-        <div class="blogs col-lg-7 col-xs-12">
-            <h1>Blogs</h1>
-            <p>
-             <a href="/blogs"><h3 class="title">Bharatiya Mahila Bank</h3>
-            </a>
-            <small>The country's first pan-India national women's bank will be launched in Mumbai today. Here are 10 things you should know about..<a href="/blogs">Read more</a></small>
+        <div class="blogs col-lg-6 col-xs-12" style="border: 1px solid #d3d7db;border-radius:10px;">
+            <p style="font-size: 13px;">
+                <a href="/blogs">
+                    <p class="blog-title" style="background-color: rgb(3,37,76);line-height: 45px;"><img
+                            src="https://www.firstpost.com/wp-content/uploads/2013/11/allwomenbank.jpg"
+                            alt="Unsplash Photo" height="45px" width="70px" style="float: left;"><span
+                            style="color: white;">Bharatiya Mahila Bank
+                        </span> </p>
+                </a>
+                <small style="font-size: 11px;color: gray;">The country's first pan-India national women's bank will be
+                    launched in Mumbai today. Here are 10 things you should know about..<a href="/blogs"
+                        style="color: rgb(3,37,76);">Read
+                        more</a></small>
             </p>
-            <p>
-                <a href="/blogs"><h3 class="title">How to get Business Loans in India </h3></a>
-            </p>
-            <p>
-                <a href="/blogs"><h3 class="title">Government Loan Schemes</h3></a>
-                <small>India has about 40 million Micro Small and Medium Enterprises (MSMEs), including registered and unregistered..<a href="/blogs">Read more</a> </small>
+            <!-- <p style="font-size: 13px;">
+                <a href="/blogs">
+                    <p class="blog-title" style="background-color: #d3d7db;line-height: 45px;"><img
+                            src="https://vyaparapp.in/blog/wp-content/uploads/2019/06/bgbgbgbgbgbgbgbgbgbgbg.jpg?x41970"
+                            alt="Unsplash Photo" height="45px" width="70px" style="float: left;">How to get Business
+                        Loans in India </p>
+                </a>
+                <small style="font-size: 11px;color: gray;">New Buisness Loans</small>
+            </p> -->
+            <p style="font-size: 13px;">
+                <a href="/blogs">
+                    <p class="blog-title" style="background-color: rgb(3,37,76);line-height: 45px;"><img
+                            src="https://myurlpro.com/wp-content/uploads/2020/06/gold-loan-calculator.jpg"
+                            alt="Unsplash Photo" height="45px" width="70px" style="float: left;"><span
+                            style="color: white;"> Government Loan Schemes</span>
+                    </p>
+                </a>
+                <small style="font-size: 11px;color: gray;">India has about 40 million Micro Small and Medium
+                    Enterprises (MSMEs), including registered and unregistered..<a href="/blogs"
+                        style="color: rgb(3,37,76);">Read more</a> </small>
             </p>
         </div>
         <div class="yt video col-lg-5 col-xs-12"><iframe width="560" height="315"
@@ -477,6 +706,59 @@
                 allowfullscreen></iframe></div>
     </div>
 
+    <section class="ars-wrapper" style="display: flex; justify-content: center;">
+        <div class="ar-grid-space">
+            <a class="ar" href="#"
+                style="--bg-img: url('https://www.pcpcc.org/sites/default/files/6.20.14-Peer-Support-Image_0.jpg')">
+                <div>
+                    <h1>Support</h1>
+                    <p>Want to be a part in our moto for inclusion?
+                        Donate some amount and help us reach more small artists in remote parts of India.</p>
+
+                    <div class="tags">
+                        <div class="tag">Support</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="ar-grid-space">
+
+            <a class="ar" href="#"
+                style="--bg-img: url('https://www.faspsych.com/uimages/services/psychiatric-consultation/video-consult.jpg')">
+                <div>
+                    <h1>Consult</h1>
+                    <p>Have the talent but don't know how to sell? Running short on resources?
+                        Get in touch with our consultant and get your business kickstarted.</p>
+
+                    <div class="tags">
+                        <div class="tag">Consult</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-fluid"
+            style="background-color:#03254c;position:relative;bottom:0%;left:0%;color:white;margin-top: 100px;padding: 25px;font-family: 'neuzeit-grotesk', sans-serif;">
+            <div class="row">
+                <div class="col-lg-4" style="display:flex;align-items:center;justify-content: center;"><a href="/">
+                        <img src="/images/logo.jpg" alt="">
+                    </a></div>
+                <div class="col-lg-4">
+                    <div style="font-size:20px;line-height:35px;"> Contact us:-</div><br>
+                    <div style="font-size: 15px;">hiraeth@gmail.com<br>
+                        567890X</div>
+                </div>
+                <div class="col-lg-4" style="font-size: 15px;">
+                    Support Us<br><br>
+                    Want counselling?<br>
+
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
@@ -488,6 +770,7 @@
 <script src="/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
 <script src="/plugins/slider/js/owl.carousel.min.js"></script>
 <script src="/js/script.js"></script>
+
 
 
 </html>

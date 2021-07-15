@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>PreCess: reuse</title>
+        <link href="icon.jpg" rel="icon">
+        <link href="icon.jpg" rel="apple-touch-icon">
+        <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+       <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="assets/images/fav.jpg">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/plugins/slider/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/plugins/slider/css/owl.theme.default.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
+        <script id="convertful-api" src="https://app.convertful.com/Convertful.js?owner=24670" async></script>
+    </head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+
+:root {
+  --color:  #03254c;
+  --transition-time: 0.5s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Open Sans';
+  background: #fafafa;
+}
+
+a {
+  color: inherit;
+}
+
+.ars-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4rem;
+  padding: 4rem;
+  margin: 0 auto;
+  width: max-content;
+}
+
+.ar {
+  font-family: 'Heebo';
+  --bg-filter-opacity: 0.5;
+  background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+  height: 15em;
+  width: 21em;
+  font-size: 1.5em;
+  color: white;
+  border-radius: 1em;
+  padding: 1em;
+  /*margin: 2em;*/
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 5em -1em black;
+  transition: all, var(--transition-time);
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #ccc;
+  text-decoration: none;
+}
+
+.ar:hover {
+  transform: rotate(0);
+}
+
+.ar h1 {
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+.ar p {
+  font-size: 0.75em;
+  font-family: 'Open Sans';
+  margin-top: 0.5em;
+  line-height: 2em;
+}
+
+.ar .tags {
+  display: flex;
+}
+
+.ar .tags .tag {
+  font-size: 0.75em;
+  background: rgba(255,255,255,0.5);
+  border-radius: 0.3rem;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  line-height: 1.5em;
+  transition: all, var(--transition-time);
+}
+
+.ar:hover .tags .tag {
+  background: var(--color);
+  color: white;
+}
+
+.ar .date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.75em;
+  padding: 1em;
+  line-height: 1em;
+  opacity: .8;
+}
+
+.ar:before, .ar:after {
+  content: '';
+  transform: scale(0);
+  transform-origin: top left;
+  border-radius: 50%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  z-index: -5;
+  transition: all, var(--transition-time);
+  transition-timing-function: ease-in-out;
+}
+
+.ar:before {
+  background: #ddd;
+  width: 250%;
+  height: 250%;
+}
+
+.ar:after {
+  background: white;
+  width: 200%;
+  height: 200%;
+}
+
+.ar:hover {
+  color: var(--color);
+}
+
+.ar:hover:before, .ar:hover:after {
+  transform: scale(1);
+}
+
+.ar-grid-space .num {
+  font-size: 3em;
+  margin-bottom: 1.2rem;
+  margin-left: 1rem;
+}
+
+.info {
+  font-size: 1.2em;
+  display: flex;
+  padding: 1em 3em;
+  height: 3em;
+}
+
+.info img {
+  height: 3em;
+  margin-right: 0.5em;
+}
+
+.info h1 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 1285px) {
+  .ars-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .ars-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .info {
+    justify-content: center;
+  }
+  .ar-grid-space .num {
+    /margin-left: 0;
+    /text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ars-wrapper {
+    padding: 4rem 2rem;
+  }
+  .ar {
+    max-width: calc(100vw - 4rem);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .info {
+    display: block;
+    text-align: center;
+  }
+  .info h1 {
+    margin: 0;
+  }
+}
+</style>
+
+
+<body>
+
+    <div class="wrapper" id="preloader">
+   
+        <img class="logo-svg" style="justify-content:center; display:flex; " src="assets/images/preloader.jpg" />
+  
+
+  </div>
+ 
+<header class="continer-fluid " id="nav" style="display: none;">
+   
+    <div id="menu-jk" class="header-bottom ">
+        <div class="container ">
+            <div class="row nav-row ">
+               
+                    <a href="index.html">
+                        <img src="assets/images/logo.jpg" alt="">
+                           </a>
+
+             
+                <div  class="nav-col" style="position:relative; margin-left: auto;">
+
+                            <ul class="navbad">
+                                <li>
+                                    <a class="nav-link" href="liked.html"><i class="fas fa-heart"></i></a>
+                                </li>
+                             
+                                <li >
+                                    <a class="nav-link" href="login.html"><i class="fas fa-user-circle"></i>
+                                    </a>
+                                </li>
+                               
+                             
+
+
+
+
+                            </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </div> 
+</header>
+
+  <section class="ars-wrapper" style="display: flex; justify-content: center;">
+    <div class="ar-grid-space">
+      <a class="ar" href="support link"  style="--bg-img: url('https://www.pcpcc.org/sites/default/files/6.20.14-Peer-Support-Image_0.jpg')">
+        <div>
+          <h1>Support</h1>
+          <p>Want to be a part in our moto for inclusion?
+            Donate some amount and help us reach more small artists in remote parts of India.</p>
+        
+          <div class="tags">
+            <div class="tag">Support</div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="ar-grid-space">
+      
+      <a class="ar" href="https://codetheweb.blog/2017/10/14/links-images-about-file-paths/" style="--bg-img: url('https://www.faspsych.com/uimages/services/psychiatric-consultation/video-consult.jpg')">
+        <div>
+          <h1>Consult</h1>
+          <p>Have the talent but don't know how to sell? Running short on resources? 
+            Get in touch with our consultant and get your business kickstarted.</p>
+          
+          <div class="tags">
+            <div class="tag">Consult</div>
+          </div>
+        </div>
+      </a>
+    </div>
+     </section>
+
+</body>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+<script src="assets/plugins/slider/js/owl.carousel.min.js"></script>
+<script src="assets/js/script.js"></script>
+	
+
+</html>

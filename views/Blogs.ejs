@@ -1,322 +1,363 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>PreCess: reuse</title>
-        <link href="icon.jpg" rel="icon">
-        <link href="icon.jpg" rel="apple-touch-icon">
-        <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
-       <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="assets/images/fav.jpg">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/all.min.css">
-        <link rel="stylesheet" href="assets/css/animate.css">
-        <link rel="stylesheet" href="assets/plugins/slider/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="assets/plugins/slider/css/owl.theme.default.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
-        <script id="convertful-api" src="https://app.convertful.com/Convertful.js?owner=24670" async></script>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Hiraeth</title>
+    <link rel="shortcut icon" href="/images/preloader.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/fav.jpg">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/plugins/slider/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/plugins/slider/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
+    <script id="convertful-api" src="https://app.convertful.com/Convertful.js?owner=24670" async></script>
+</head>
 
 
 <style>
-   
-html,
-body {
-    box-sizing: border-box;
-    font-family: 'neuzeit-grotesk', sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1em;
-    line-height: 1.5;
-    color: #03254c;
-    scroll-behavior: smooth;
-}
+    html,
+    body {
+        box-sizing: border-box;
+        font-family: 'neuzeit-grotesk', sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1em;
+        line-height: 1.5;
+        color: #03254c;
+        scroll-behavior: smooth;
+    }
 
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-
-main {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    min-height: 640px;
-    background-color: #fff;
-}
-
-h3 {
-    font-family: var(--fonts-style-x);
-    font-size: 2.25em;
-}
-
-h6 {
-    font-family: var(--fonts-style-x);
-    font-size: 1em;
-}
-
-p {
-    font-size: 1em;
-}
-
-a {
-    text-decoration: none;
-}
-
-::selection {
-    color: rgb(102, 95, 95);
-    background-color: #005AEE;
-}
-
-.card-container {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-    margin: 20px;
-    font-family: 'neuzeit-grotesk', sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1em;
-    line-height: 1.5;
-    color: #03254c;
-}
-
-.card {
-    height: 470px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 40px 40px -20px #8fc7d544;
-    overflow: hidden;
-}
-
-.card .card-top {
-    height: 236px;
-    font-family: 'neuzeit-grotesk', sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1em;
-    line-height: 1.5;
-    color: #03254c;
-    background-color: #fff;
-    overflow: hidden;
-}
-
-.card .card-top a {
-    display: block;  
-    height: 100%;  
-}
-
-.card .card-top a img {
-    width: 100%;
-    height: inherit;
-    object-fit: cover;
-    object-position: center; 
-    transition: 300ms;
-}
-
-.card .card-content {
-    padding: 30px;
-}
-
-.card .card-content .tag {
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.card .tag-travel {
-    color: #33459b;
-}
-
-.card .tag-nature {
-    color: #339b4b;
-}
-
-.card .tag-architecture {
-    color: #9b3d33;
-}
-
-.card .title {
-    color: #03254c;
-    font-weight: 700;
-    transition: 300ms;
-}
-
-.card p {
-    color: #7B8591;
-    margin-top: 20px;
-}
-
-
-
-.card .card-top a img:hover {
-    opacity: .75;
-}
-
-.card .title:hover {
-    color: #03254cbb;
-}
-
-@media only screen and (max-width: 1240px) {
 
     main {
-        display: block;
-        height: auto;
-        min-height: max(640px, 100vh);
-        padding: 80px 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        height: 540px;
+        background-color: #fff;
+        margin-top: 300px;
+    }
+
+    h3 {
+        font-family: var(--fonts-style-x);
+        font-size: 2.25em;
+    }
+
+    h6 {
+        font-family: var(--fonts-style-x);
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    ::selection {
+        color: rgb(102, 95, 95);
+        background-color: #005AEE;
     }
 
     .card-container {
-        grid-template-columns: 1fr 1fr;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+        width: 100%;
+        max-width: 1200px;
         height: auto;
-        margin: 0;
-        padding: 40px;
+        margin: 20px;
+        font-family: 'neuzeit-grotesk', sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1em;
+        line-height: 1.5;
+        color: #03254c;
     }
 
     .card {
-        height: auto;
+        height: 470px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 40px 40px -20px #8fc7d544;
+        overflow: hidden;
     }
 
-}
-
-@media only screen and (max-width: 768px) {
-
-    .card-container {
-        grid-template-columns: 1fr;
+    .card .card-top {
+        height: 236px;
+        font-family: 'neuzeit-grotesk', sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1em;
+        line-height: 1.5;
+        color: #03254c;
+        background-color: #fff;
+        overflow: hidden;
     }
 
-}
-
-@media only screen and (max-width: 425px) {
-
-    .card-container {
-        padding: 20px;
+    .card .card-top a {
+        display: block;
+        height: 100%;
     }
 
-}
+    .card .card-top a img {
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+        object-position: center;
+        transition: 300ms;
+    }
 
-.designer {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    font-weight: 400;
-    color: #46a2b9;
-    letter-spacing: 1px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 300ms;
-}
+    .card .card-content {
+        padding: 30px;
+    }
 
-.designer a {
-    text-decoration: none;
-    color: #23515d;
-}
+    .card .card-content .tag {
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
 
-body:hover .designer {
-    opacity: 1;
-}
+    .card .tag-travel {
+        color: #33459b;
+    }
+
+    .card .tag-nature {
+        color: #339b4b;
+    }
+
+    .card .tag-architecture {
+        color: #9b3d33;
+    }
+
+    .card .title {
+        color: #03254c;
+        font-weight: 700;
+        transition: 300ms;
+    }
+
+    .card p {
+        color: #7B8591;
+        margin-top: 20px;
+    }
+
+
+
+    .card .card-top a img:hover {
+        opacity: .75;
+    }
+
+    .card .title:hover {
+        color: #03254cbb;
+    }
+
+    @media only screen and (max-width: 1240px) {
+
+        main {
+            display: block;
+            height: auto;
+            min-height: max(640px, 100vh);
+            padding: 80px 0;
+        }
+
+        .card-container {
+            grid-template-columns: 1fr 1fr;
+            height: auto;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .card {
+            height: auto;
+        }
+
+    }
+
+    @media only screen and (max-width: 768px) {
+
+        .card-container {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    @media only screen and (max-width: 425px) {
+
+        .card-container {
+            padding: 20px;
+        }
+
+    }
+
+    .designer {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        font-weight: 400;
+        color: #46a2b9;
+        letter-spacing: 1px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 300ms;
+    }
+
+    .designer a {
+        text-decoration: none;
+        color: #23515d;
+    }
+
+    body:hover .designer {
+        opacity: 1;
+    }
 </style>
 
 
 <body>
 
     <div class="wrapper" id="preloader">
-   
-        <img class="logo-svg" style="justify-content:center; display:flex; " src="assets/images/preloader.jpg" />
-  </div>
- 
-<header class="continer-fluid " id="nav" style="display: none;">
-   
-    <div id="menu-jk" class="header-bottom ">
-        <div class="container ">
-            <div class="row nav-row ">
-               
+
+        <img class="logo-svg" style="justify-content:center; display:flex; " src="/images/preloader.jpg" />
+
+
+    </div>
+
+    <header class="continer-fluid " id="nav" style="display: none;">
+
+        <div id="menu-jk" class="header-bottom ">
+            <div class="container ">
+                <div class="row nav-row ">
+
                     <a href="index.html">
-                        <img src="assets/images/logo.jpg" alt="">
-                           </a>
+                        <img src="/images/logo.jpg" alt="">
+                    </a>
 
-             
-                <div  class="nav-col" style="position:relative; margin-left: auto;">
 
-                            <ul class="navbad">
+                    <div class="nav-col" style="position:relative; margin-left: auto;">
+
+                        <ul class="navbad">
+                            <% if(!currentUser) { %>
                                 <li>
-                                    <a class="nav-link" href="liked.html"><i class="fas fa-heart"></i></a>
-                                </li>
-                             
-                                <li >
-                                    <a class="nav-link" href="login.html"><i class="fas fa-user-circle"></i>
+                                    <a class="nav-link" href="/login"><i class="fas fa-user-circle"></i>
                                     </a>
                                 </li>
-                               
-                             
+                                <li>
+                                    <a class="nav-link" href="/"><i class="fas fa-home"></i></a>
+                                </li>
+                                <%} else { %>
+
+                                    <li>
+                                        <a class="nav-link" href=""><i class="fas fa-heart"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" href="/addpost"><i class="fas fa-plus-circle"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i></a>
+                                    </li>
+
+                                    <% } %>
+
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <ul class="cards">
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img
+                            src="https://www.firstpost.com/wp-content/uploads/2013/11/allwomenbank.jpg"
+                            alt="Unsplash Photo"></div>
+                    <div class="card-content">
+                        <h6 class="tag tag-travel">Inspire</h6>
+                        <a
+                            href="https://www.firstpost.com/business/bharatiya-mahila-bank-all-you-need-to-know-about-first-all-women-bank-1237365.html">
+                            <h6 class="title">Bharatiya Mahila Bank</h6>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><a
+                            href="https://www.lendingkart.com/blog/government-loan-schemes-for-small-businesses/"><img
+                                src="https://vyaparapp.in/blog/wp-content/uploads/2019/06/bgbgbgbgbgbgbgbgbgbgbg.jpg?x41970"
+                                alt="Unsplash Photo"></a></div>
+                    <div class="card-content">
+                        <h6 class="tag tag-nature">Knowelege</h6>
+                        <a href="https://www.lendingkart.com/blog/government-loan-schemes-for-small-businesses/">
+                            <h6 class="title"> Government Loan Schemes</h6>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><a
+                            href="https://www.onlinekaise.com/new-business-ke-liye-loan-chahiye-to-janiye-bank-se-loan-kaise-le/"><img
+                                src="https://myurlpro.com/wp-content/uploads/2020/06/gold-loan-calculator.jpg"
+                                alt="Unsplash Photo"></a></div>
+                    <div class="card-content">
+                        <h6 class="tag tag-architecture">Learn</h6>
+                        <a
+                            href="https://www.onlinekaise.com/new-business-ke-liye-loan-chahiye-to-janiye-bank-se-loan-kaise-le/">
+                            <h6 class="title">How to get Business Loans in India</h6>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
 
 
 
-
-                            </ul>
-
+    <footer>
+        <div class="container-fluid"
+            style="background-color:#03254c;position:relative;bottom:0%;left:0%;color:white;margin-top: 100px;padding: 25px;font-family: 'neuzeit-grotesk', sans-serif;">
+            <div class="row">
+                <div class="col-lg-4" style="display:flex;align-items:center;justify-content: center;"><a href="/">
+                        <img src="/images/logo.jpg" alt="">
+                    </a></div>
+                <div class="col-lg-4">
+                    <div style="font-size:20px;line-height:35px;"> Contact us:-</div><br>
+                    <div style="font-size: 15px;">hiraeth@gmail.com<br>
+                        567890X</div>
+                </div>
+                <div class="col-lg-4" style="font-size: 15px;">
+                    Support Us<br><br>
+                    Want counselling?<br>
 
                 </div>
             </div>
         </div>
-    </div> 
-</header>
-
-<main style="display: flex;flex-direction: row;">
-   
-    <section class="card-container">
-        <div class="card">
-            <div class="card-top">
-                <a href="https://www.firstpost.com/business/bharatiya-mahila-bank-all-you-need-to-know-about-first-all-women-bank-1237365.html"><img src="https://www.firstpost.com/wp-content/uploads/2013/11/allwomenbank.jpg" alt="Unsplash Photo"></a>
-            </div>
-            <div class="card-content">
-                <h6 class="tag tag-travel">Inspire</h6>
-                <a href="https://www.firstpost.com/business/bharatiya-mahila-bank-all-you-need-to-know-about-first-all-women-bank-1237365.html"><h3 class="title">Bharatiya Mahila Bank</h3></a>
-                        </div>
-        </div>
-        <div class="card">
-            <div class="card-top">
-                <a href="https://www.lendingkart.com/blog/government-loan-schemes-for-small-businesses/"><img src="https://vyaparapp.in/blog/wp-content/uploads/2019/06/bgbgbgbgbgbgbgbgbgbgbg.jpg?x41970" alt="Unsplash Photo"></a>
-            </div>
-            <div class="card-content">
-                <h6 class="tag tag-nature">Knowelege</h6>
-                <a href="https://www.lendingkart.com/blog/government-loan-schemes-for-small-businesses/"><h3 class="title"> Government Loan Schemes</h3></a>
-                  </div>
-        </div>
-        <div class="card">
-            <div class="card-top">
-                <a href="https://www.onlinekaise.com/new-business-ke-liye-loan-chahiye-to-janiye-bank-se-loan-kaise-le/"><img src="https://myurlpro.com/wp-content/uploads/2020/06/gold-loan-calculator.jpg" alt="Unsplash Photo"></a>
-            </div>
-            <div class="card-content">
-                <h6 class="tag tag-architecture">Learn</h6>
-                <a href="https://www.onlinekaise.com/new-business-ke-liye-loan-chahiye-to-janiye-bank-se-loan-kaise-le/"><h3 class="title">How to get Business Loans in India</h3></a>
-                 </div>
-        </div>
-    </section>
-
-</main>
-
-
+    </footer>
 
 </body>
 
-<script src="assets/js/jquery-3.2.1.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
-<script src="assets/plugins/slider/js/owl.carousel.min.js"></script>
-<script src="assets/js/script.js"></script>
-	
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+<script src="/plugins/slider/js/owl.carousel.min.js"></script>
+<script src="/js/script.js"></script>
+
 
 </html>
