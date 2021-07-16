@@ -7,10 +7,10 @@ In the era of covid-19, when businesses are going virtual it becomes even harder
 
 ## Screenshots 
 
-[![image.png](https://res.cloudinary.com/kjstore/image/upload/v1626405106/Hiraeth/LandingCarausel_lbez9n.jpg)]()
-[![image.png](https://res.cloudinary.com/kjstore/image/upload/v1626405107/Hiraeth/AddPost_xv4fug.png)]()
-[![image.png](https://res.cloudinary.com/kjstore/image/upload/v1626405107/Hiraeth/postDetails_oskvbf.jpg)]()
-[![image.png](https://res.cloudinary.com/kjstore/image/upload/v1626409340/Hiraeth/aac3d11a-e1bc-4c82-947b-813a37d7001d_gskrij.jpg)]()
+[![image.png](https://res.cloudinary.com/kjstore/image/upload/v1626405106/Hiraeth/LandingCarausel_lbez9n.jpg)](https://res.cloudinary.com/kjstore/image/upload/v1626405106/Hiraeth/LandingCarausel_lbez9n.jpg)
+[![image.png](https://res.cloudinary.com/kjstore/image/upload/v1626405107/Hiraeth/AddPost_xv4fug.png)](https://res.cloudinary.com/kjstore/image/upload/v1626405107/Hiraeth/AddPost_xv4fug.png)
+[![image.png](https://res.cloudinary.com/kjstore/image/upload/v1626405107/Hiraeth/postDetails_oskvbf.jpg)](https://res.cloudinary.com/kjstore/image/upload/v1626405107/Hiraeth/postDetails_oskvbf.jpg)
+[![image.png](https://res.cloudinary.com/kjstore/image/upload/v1626409340/Hiraeth/aac3d11a-e1bc-4c82-947b-813a37d7001d_gskrij.jpg)](https://res.cloudinary.com/kjstore/image/upload/v1626409340/Hiraeth/aac3d11a-e1bc-4c82-947b-813a37d7001d_gskrij.jpg)
 
 
 ## How to build and run Hiraeth from source
@@ -99,7 +99,7 @@ $ # Access the web app in localhost- localhost:3000
 
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ## Contributors ✨
 
@@ -123,4 +123,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-{"mode":"full","isActive":false}
+<!-- {"mode":"full","isActive":false} -->
