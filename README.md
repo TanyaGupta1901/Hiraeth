@@ -2,7 +2,7 @@
 
 > Hiraeth is an initiative to provide the inclusion of local entrepreneurs into the global market. There're several unnoticed and unpaid talents across the country which require a little support and they can do wonders. 
 
-In the era of covid-19, when businesses are going virtual it becomes even harder to survive. This brings in itself a new set of challenges, and we see a lot of potential for technology to bridge these challenges and hurdles in a significant way. In this context, Hiraeth aims to bridge some of them by providing a marketplace, updates on opportunities to grow, financial support, and consultancy.
+In the era of covid-19, when businesses are going virtual it becomes even harder for them to survive. This brings in itself a new set of challenges. Artists are served hard time making their ends for living and we see a lot of potential for technology to bridge these challenges and hurdles in a significant way. In this context, Hiraeth aims to bridge some of them by providing a marketplace, updates on opportunities to grow, financial support, and consultancy. High time we value their talents right. We all have watched local artists undersell their art to earn their chapati, Hiraeth provide them a platform with necessary guidance to reach the global market.
 
 
 ## Screenshots 
